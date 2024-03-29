@@ -43,9 +43,3 @@ webrtc_ctx = webrtc_streamer(
     rtc_configuration={"iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]}
 )
 
-if webrtc_ctx.video_processor:
-    st.write("Webcam feed with Sign Language Detection")
-    st.write("This might not work on mobile browsers due to the lack of WebRTC support.")
-else:
-    st.error("WebRTC is not available for this browser. Please try again using a different browser.")
-
